@@ -23,7 +23,7 @@ instance Exception String where
     Nothing -> Nothing
 ~~~
 
-Finally, we shorten a URL with the [Google URL Shortener API](https://developers.google.com/url-shortener/v1/getting_started).
+Finally, we shorten a URL with the [Google URL Shortener API](https://developers.google.com/url-shortener/v1/getting_started):
 ~~~ {.haskell}
 url :: String
 url = "https://www.googleapis.com/urlshortener/v1/url"
