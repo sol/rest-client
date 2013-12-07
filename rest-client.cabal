@@ -24,7 +24,7 @@ library
     , http-client
     , http-client-tls
     , aeson
-    , aeson-toolkit == 0.0.0
+    , aeson-toolkit >= 0.0.1
 
 test-suite spec
   type:
@@ -46,3 +46,16 @@ test-suite spec
     , warp
     , rest-client
     , hspec >= 1.5
+
+test-suite readme
+  type:
+      exitcode-stdio-1.0
+  ghc-options:
+      -pgmL markdown-unlit
+  main-is:
+      README.lhs
+  build-depends:
+      base    == 4.*
+    , aeson
+    , aeson-toolkit
+    , rest-client
