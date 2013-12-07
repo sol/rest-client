@@ -13,8 +13,9 @@ import Control.Exception
 
 
 Next, we make `String` and instance of `Exception`, so that `Failure String m`
-can be unified to `IO` (don't try this at home!):
+can be unified to `IO`:
 ~~~ {.haskell}
+-- Don't try this at home!
 instance Exception String where
   toException = SomeException . ErrorCall
   fromException e = case fromException e of
@@ -22,10 +23,10 @@ instance Exception String where
     Nothing -> Nothing
 ~~~
 
+Finally, we [shorten a URL with the Google URL Shortener
+API](https://developers.google.com/url-shortener/v1/getting_started#shorten):
 
 ~~~ {.haskell}
--- API documentation is at
--- https://developers.google.com/url-shortener/v1/getting_started#shorten
 url :: String
 url = "https://www.googleapis.com/urlshortener/v1/url"
 
