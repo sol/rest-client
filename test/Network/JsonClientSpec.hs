@@ -35,7 +35,7 @@ spec = do
       action
       reqBody <$> r `shouldReturn` "[23,42]"
 
-    it "sets Concurrent-Type to application/json" $ withServer $ \r -> do
+    it "sets Content-Type to application/json" $ withServer $ \r -> do
       action
       r >>= (`shouldSatisfy` ((elem ("Content-Type", "application/json")) .  reqHeaders))
 
