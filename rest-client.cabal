@@ -18,8 +18,10 @@ library
       Network.RestClient
   build-depends:
       base          == 4.*
+    , data-default
     , bytestring
     , transformers
+    , http-types
     , failure
     , http-client
     , http-client-tls
