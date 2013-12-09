@@ -58,6 +58,7 @@ test-suite readme
       README.lhs
   build-depends:
       base    == 4.*
+    , markdown-unlit
     , aeson
     , aeson-toolkit
     , rest-client
